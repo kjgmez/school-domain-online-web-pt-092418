@@ -1,3 +1,4 @@
+require 'pry'
 class School
   attr_reader :roster
   def initialize(school_name)
@@ -5,6 +6,7 @@ class School
     @roster={}
   end
   def add_student(name, grade)
+    binding.pry
     @roster.include?(grade) ? @roster[grade] << name : @roster[grade]=[name] #ternary == conditional ? if true : if fasle (else)
   end
   def grade(grade)
